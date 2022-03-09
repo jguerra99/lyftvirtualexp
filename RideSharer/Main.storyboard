@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zsp-ns-d4e">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ride History-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="RideHistoryViewController" customModule="RideSharer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MT1-WB-Rmf">
+                                <rect key="frame" x="0.0" y="78" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPu-gC-nj7">
+                                <rect key="frame" x="0.0" y="40" width="414" height="30"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MT1-WB-Rmf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1LN-8J-jxF"/>
+                            <constraint firstItem="tPu-gC-nj7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Dy3-lz-iwQ"/>
+                            <constraint firstItem="MT1-WB-Rmf" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Fl0-BL-RnV"/>
+                            <constraint firstItem="MT1-WB-Rmf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Kek-zQ-5ch"/>
+                            <constraint firstItem="MT1-WB-Rmf" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Kh9-v9-9Ea"/>
+                            <constraint firstAttribute="bottom" secondItem="MT1-WB-Rmf" secondAttribute="bottom" id="OCq-FW-Zlh"/>
+                            <constraint firstItem="tPu-gC-nj7" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="40" id="ZAF-yv-SfE"/>
+                            <constraint firstItem="MT1-WB-Rmf" firstAttribute="top" secondItem="tPu-gC-nj7" secondAttribute="bottom" constant="8" symbolic="YES" id="bd8-oi-PjN"/>
+                            <constraint firstItem="tPu-gC-nj7" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="hfx-t4-2Zs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ride History" id="AgG-AB-iXa"/>
+                    <connections>
+                        <outlet property="tableView" destination="MT1-WB-Rmf" id="lbH-9E-G0B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2019" y="-303"/>
+        </scene>
+        <!--Request Ride-->
+        <scene sceneID="opM-8W-i32">
+            <objects>
+                <viewController id="4rh-hR-xWP" customClass="RequestRideViewController" customModule="RideSharer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d6W-iI-CD9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="v8e-gA-PGy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WhV-Pd-gDv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v8e-gA-PGy" firstAttribute="leading" secondItem="WhV-Pd-gDv" secondAttribute="leading" id="beJ-Uz-gs3"/>
+                            <constraint firstAttribute="bottom" secondItem="v8e-gA-PGy" secondAttribute="bottom" id="fdb-wb-5jw"/>
+                            <constraint firstItem="v8e-gA-PGy" firstAttribute="trailing" secondItem="WhV-Pd-gDv" secondAttribute="trailing" id="j75-c9-F9z"/>
+                            <constraint firstItem="v8e-gA-PGy" firstAttribute="top" secondItem="d6W-iI-CD9" secondAttribute="top" id="qY3-ma-70y"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Request Ride" id="ixN-1K-XXC">
+                        <color key="badgeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="mapView" destination="v8e-gA-PGy" id="Uxi-gO-ow1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLH-lB-fqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2059" y="356"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="EIA-cV-UWT">
+            <objects>
+                <tabBarController id="zsp-ns-d4e" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hUW-aa-VjT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4rh-hR-xWP" kind="relationship" relationship="viewControllers" id="hfk-Z3-UNE"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="Hog-iS-vsa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGa-uu-xe6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
